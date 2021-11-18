@@ -137,46 +137,10 @@ img {
 .subtitle h2{
     text-align: center;
 }
-/*==========================
-
-.crud__table
-{
-    background-color: rgb(228, 232, 235);
-}
-
-=========TABLE LEFT=========
-==========================*/
 
 /*====================
 =========CRUD=========
-======================*/
-.col-four
-{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    gap: 1em;
-}
-.col-three
-{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    gap: 1em;
-}
-
-.col-two
-{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 1em;   
-}
-
-
-.col-one
-{
-    width: 100%;
-}
-
-
+====================*/
 
 .crud{
     display: flex;
@@ -184,39 +148,65 @@ img {
     width: 100%;
 }
 
-
 .crud__table, .crud__form{
     min-width: 45%;
     max-width: 45%;
 }
 
-.crud__table-grid, .crud__table-flex{
-    margin-bottom: 1em;
+.crud__table table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
     width: 100%;
 }
-
-.crud__table-grid{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 0.5em;
-}
-
-.crud__table-grid-element{
-    width: 100%;
-}
-
-.crud__table-flex{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
-.crud__table-flex-element{
-    flex-basis: 25%;
+  
+.crud__table td, .crud__table th {
+    border: 1px solid hsl(0, 0%, 87%);
+    color: hsl(0, 0%, 100%);
+    text-align: left;
+    padding: 8px;
 }
 
 .crud__form{
     width: 100%;
+}
+
+.crud__form .col-one{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crud__form .col-one .crud__form-element{
+    width: 100%;
+}
+
+.crud__form .col-two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.crud__form .col-two .crud__form-element{
+    width: 48%;
+}
+
+.crud__form .col-three{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.crud__form .col-three .crud__form-element{
+    width: 32%;
+}
+
+.crud__form ..col-four{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.crud__form ..col-four .crud__form-element{
+    width: 23%;
 }
 
 .crud__form-element{
@@ -245,18 +235,51 @@ img {
     width: 100%;
 }
 
+.crud__form-input.inline{
+    display: flex;
+    gap: 2%;
+}
+
 .crud__form-input input, 
 .crud__form-input textarea,
 .crud__form-input select {
-    background-color: hsl(0, 0%, 100%);
+    background-color:hsl(226, 63%, 45%);
 	border: none;
-	border-bottom: 1px solid hsl(0, 0%, 73%);
+	border-bottom: 0.1em solid  hsl(0, 0%, 100%);
 	box-sizing: border-box;
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
 	font-family: "Ubuntu";
 	font-weight: 600;
 	padding: 0.2em 0.5em;
 	width: 100%;
+}
+
+.crud__form-input input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.crud__form-input input[type=checkbox],
+.crud__form-input input[type=radio]{
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.crud__form-input input[type=file]{
+    border: none;
+}
+
+.crud__form-input textarea{
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(0, 0%, 0%)
+}
+
+.crud__form-input.inline label{
+    color: hsl(0, 0%, 100%);
+	font-family: "Ubuntu";
+	font-weight: 600;
+    font-size: 1.5em;
+    margin: 0 0.5em;
+    width: max-content;
 }
 
 .crud__form-input input:focus, .crud__form-input textarea:focus{

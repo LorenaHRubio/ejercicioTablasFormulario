@@ -39,11 +39,11 @@ footer{
 ======Typography======
 ======================*/
 
-h1, h2, h3, h4, h5, h6, a, p{
+h1, h2, h3, h4, h5, h6, a, p, label{
     color: hsl(0, 0%, 100%);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, label {
     font-family: "Ubuntu";
 }
 
@@ -137,16 +137,53 @@ img {
 .subtitle h2{
     text-align: center;
 }
+/*==========================
+
+.crud__table
+{
+    background-color: rgb(228, 232, 235);
+}
+
+=========TABLE LEFT=========
+==========================*/
 
 /*====================
 =========CRUD=========
 ======================*/
+.col-four
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1em;
+}
+.col-three
+{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 1em;
+}
+
+.col-two
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1em;   
+}
+
+
+.col-one
+{
+    width: 100%;
+}
+
+
 
 .crud{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 
 .crud__table, .crud__form{
     min-width: 45%;

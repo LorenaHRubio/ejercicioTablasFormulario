@@ -39,63 +39,96 @@
                 <h2>Subtítulo</h2>
             </div>
 
-            <div class="main-element crud">
+            <div class="crud">
                 <div class="crud__table">
-                    <div class="crud__table-grid">
-                        <div class="crud__table-grid-element">
-                            <img src="images/1.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-grid-element">
-                            <img src="images/2.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-grid-element">
-                            <img src="images/3.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-grid-element">
-                            <img src="images/4.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-grid-element">
-                            <img src="images/5.jpg" alt="ardillas">
-                        </div>
-                    </div>
-    
-                    <div class="crud__table-flex">
-                        <div class="crud__table-flex-element">
-                            <img src="images/1.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-flex-element">
-                            <img src="images/2.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-flex-element">
-                            <img src="images/3.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-flex-element">
-                            <img src="images/4.jpg" alt="ardillas">
-                        </div>
-
-                        <div class="crud__table-flex-element">
-                            <img src="images/5.jpg" alt="ardillas">
-                        </div>
-                    </div>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Mail</th>
+                        </tr>
+                        <tr>
+                            <td>453</td>
+                            <td>453</td>
+                            <td>453</td>
+                        </tr>
+                        <tr>
+                            <td>Federica</td>
+                            <td>Federica</td>
+                            <td>Federica</td>
+                        </tr>
+                        <tr>
+                            <td>federica@lahermosa.com</td>
+                            <td>federica@lahermosa.com</td>
+                            <td>federica@lahermosa.com</td>
+                        </tr>
+                    </table>
                 </div>
     
                 <div class="crud__form">
                     <form class="crud__admin-form" id="crud__user-form" action="/users/create" autocomplete="off"> 
-                        <div class="crud__form-element">
-                            <div class="crud__form-label">
-                                <label for="name">Nombre</label>
+                        <div class="crud__form-element col-four">
+                            <div>
+                                <label for="fname">Nombre</label>
+                                 <input type="text" id="fname"> 
+                            </div>
+                            <div>
+                                <label for="flastname">Apellidos</label>
+                                 <input type="text" id="flastname">
+                            </div>
+                            <div>
+                                <label for="lage">Edad</label>
+                                <input type="number" id="fage">
+                            </div>
+                            <div>
+                                <label for="fdate">Fecha</label>
+                                <input type="date" id="fdate">
+                            </div>
+                        </div>
+
+                        <div class="crud__form-element col-three">
+                            <div class="col-three__browse">
+                                <label for="fselect">Selecciona el archivo</label><br>
+                                <input type="fselect" id="selectedFile" style="display: none;" />
+                                <input type="button" value="Buscar archivo" onclick="document.getElementById('selectedFile').click();" />
                             </div>
 
-                            <div class="crud__form-input">
-                                <input type="text" name="name">
+                            <div class="col-three__pass">
+                                <label for="fpassword">Contraseña</label>
+                                <input type="password" id="fpassword">
                             </div>
+
+                            <div class="col-three__select">
+                                <label for="fchocolat">Escoge un chocolate:</label>
+                                 <select name="chocolat" id="fchocolat">
+                                    <option value="leonidas">Leonidas</option>
+                                    <option value="picard">Picard</option>
+                                    <option value="colosseo">Colosseo</option>
+                                    <option value="lady godiva">Lady Godiva</option>
+                                </select> 
+                             </div>                            
+                        </div>
+
+                        <div class="crud__form-element col-two">
+                            <div class="col-two__radio">
+                                <p>¿Sabes programar?</p>
+                                <input type="radio" id="fans-y">
+                                <label for="fans-y">Si</label>
+                                <input type="radio" id="fans-n">
+                                <label for="fans-n">No</label>
+                            </div>
+                            <div class="col-two__checkbox">
+                                <p>¿Qué lenguajes conoces?</p>
+                                <input type="checkbox" id="fhtml">
+                                <label for="fhtml"> HTML</label>
+                                <input type="checkbox" id="fc">
+                                <label for="fc"> C</label>
+                            </div>
+                        </div>
+
+                        <div class="crud__form-element col-one">
+                            <label for="ftextarea">Deja un comentario:</label>
+                            <textarea id="ftextarea" rows="4" cols="50"></textarea>      
                         </div>
 
                         <div class="crud__form-element">

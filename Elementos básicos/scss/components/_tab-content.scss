@@ -1,0 +1,108 @@
+
+/* tab content */
+
+.wrapper_tabcontent {
+    background-color: white;
+    margin-top: 0px;
+    z-index: -3;
+    position: relative;
+    opacity: 1;
+    padding: 40px 60px;
+    overflow: hidden;
+    transition: all 1s ease;
+    top: 0;
+ }
+ 
+ .tabcontent {
+    display: none;
+    min-height: 180px;
+    
+ }
+ 
+ @keyframes tabEffect {
+    from {
+       top: -40px;
+    }
+    to {
+       top: 0px;
+    }
+ }
+ 
+ .tabcontent.active {
+ 
+    transition: all 1s ease;
+    display: block;
+ }
+ 
+ /* Tab content line */
+ .wrapper_tabcontent:after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    transition: all 1s ease;
+ }
+ 
+ /* Title */
+ .tabcontent h3 {
+    font-size: 40px;
+    top: 75px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -90px;
+    opacity: 0.1;
+    width: 200px;
+    height: 60px;
+    background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0;
+    animation: city 1s ease;
+ 
+    @media screen and (max-width: 512px) {
+       top: 65px;
+    }
+ }
+ 
+ @keyframes city {
+    from {
+       left: -150px;
+    }
+    to {
+       left: -90px;
+    }
+ }
+ 
+ /* Text*/
+ .tabcontent p {
+    color: $text;
+    margin: 0;
+    padding: 0;
+    line-height: 28px;
+    font-weight: 100;
+    transition: all 1s ease;
+    animation: fadeEffect 0.6s ease;
+    width: 100%;
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+ 
+    @media screen and (max-width: 512px) {
+       font-size: 14px;
+       line-height: 26px;
+    }
+ }
+ 
+ @keyframes fadeEffect {
+    from {
+       opacity: 0;
+       margin-left: 30px;
+    }
+    to {
+       opacity: 1;
+       margin-left: 0;
+    }
+ }

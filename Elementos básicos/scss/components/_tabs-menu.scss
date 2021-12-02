@@ -1,0 +1,15 @@
+/* Tabs menu */
+
+.tabs {
+    margin: 0;
+    background-image: linear-gradient(135deg, $n01 0%, $n02 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-radius: 2px 2px 0px 0px;
+ 
+    @media screen and (max-width: 512px) {
+       height: 40px;
+    }
+ }

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i");
+
+body {
+   background-color: $grey;
+   font-family: "IBM Plex Sans", sans-serif;
+   margin:0;
+}
+
+.content {
+   max-width: 600px;
+   width: 100%;
+   min-width: 260px;
+   margin: 0 5%;
+   margin-top: 10%;
+   transition: 0.3s ease;
+
+   @media screen and (max-width: 512px) {
+      margin: 0 4%;
+      margin-top: 5%;
+   }
+}
+
+

@@ -76,15 +76,15 @@
 
                 <div class="container">
                     <ul class="ul-form">
-                        <li class="li-form tabs-active">Botón 1</li>
-                        <li class="li-form">Botón 2</li>
-                        <li class="li-form">Botón 3</li>
-                        <li class="li-form">Botón 4</li>
+                        <li class="tabs-form tabs-active" data-tab="content">Datos del Usuario</li>
+                        <li class="tabs-form" data-tab="photo">Fotos</li>
+                        <li class="tabs-form"  data-tab="skills">Cuestionario</li>
+                        <li class="tabs-form"  data-tab="text-area">Comentarios</li>
                     </ul>
                     <div class="subcontainer">
                         <div class="crud__form">
                             <form class="crud__admin-form" id="crud__user-form" action="/users/create" autocomplete="off"> 
-                                <div class="tabs-active" id="tabs-elements">
+                                <div class="tabs-active" id="tabs-elements" data-tab="content">
                                     <div class="crud__form-four-columns">
                                         <div class="crud__form-element">
                                             <div class="crud__form-label">
@@ -126,7 +126,7 @@
                                     </div>                                    
                                 </div>
         
-                                <div class="" id="tabs-elements">
+                                <div class="" id="tabs-elements" data-tab="photo">
                                     <div class="crud__form-three-columns">
                                         <div class="crud__form-element">
                                             <div class="crud__form-label">
@@ -163,7 +163,7 @@
                                     </div>                                                                       
                                 </div>        
                                 
-                                <div class="" id="tabs-elements">
+                                <div class="" id="tabs-elements" data-tab="skills">
                                     <div class="crud__form-two-columns">
                                         <div class="crud__form-element">
                                             <div class="crud__form-label">
@@ -204,7 +204,7 @@
                                     </div>
                                 </div>
         
-                                <div class="" id="tabs-elements">
+                                <div class="" id="tabs-elements" data-tab="text-area">
                                     <div class="crud__form-one-column">
                                         <div class="crud__form-element">
                                             <div class="crud__form-label">

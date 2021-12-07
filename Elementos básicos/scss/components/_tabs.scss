@@ -21,14 +21,14 @@
     transition: all .5s ease;
 }
 .container .li-form.tabs-active{
-    background-color: $color-secondary-darkest;
+    background-color: $color-primary;
     color:$white;
     box-shadow: $shadow-top;
 }
 .container .subcontainer{
     margin: -1em;
     padding: 3em;
-    background-color: $color-secondary-darkest;
+    background-color: $color-primary;
     box-shadow: $shadow-botton;
 }
 .subcontainer #tabs-elements{

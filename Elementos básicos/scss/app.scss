@@ -1,8 +1,7 @@
 @import "base/normalize";
 @import "base/variables";
+@import "base/typography";
 @import "base/contents";
 @import "components/master";
-@import "components/tab-content";
-@import "components/tabs-link";
-@import "components/tabs-menu";
-@import "components/wrapper";
+@import "components/crud";
+@import "components/tabs";

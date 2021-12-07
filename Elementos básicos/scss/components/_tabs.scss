@@ -1,0 +1,41 @@
+.container{
+    background-color: $color-primary-darkest;
+    //max-width: 120em;
+    width: 50%;
+    padding: 1em;
+    box-shadow: $shadow-botton;
+    box-sizing: content-box;
+}
+
+.container .ul-form{
+    width: 100%;
+    //background-color: royalblue;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container .li-form{
+    cursor: pointer;
+    padding: 1em;
+    transition: all .5s ease;
+}
+.container .li-form.tabs-active{
+    background-color: $color-secondary-darkest;
+    color:$white;
+    box-shadow: $shadow-top;
+}
+.container .subcontainer{
+    margin: -1em;
+    padding: 3em;
+    background-color: $color-secondary-darkest;
+    box-shadow: $shadow-botton;
+}
+.subcontainer #tabs-elements{
+    //background-color: $grey-darker;
+    display: none;
+    transition: all .5s ease;
+}
+.subcontainer #tabs-elements.tabs-active{
+   display: unset;
+}

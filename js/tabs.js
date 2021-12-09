@@ -1,4 +1,4 @@
-export function tabs(){
+export let tabs = () => {
     const tabsForm  = document.querySelectorAll('.tabs-form');
     const tabsElements  = document.querySelectorAll('#tabs-elements');
     // CLICK en li

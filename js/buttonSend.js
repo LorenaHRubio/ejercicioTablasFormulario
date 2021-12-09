@@ -1,4 +1,4 @@
-export function buttonSend(){
+export let buttonSend = () => {
     const button = document.querySelector(".crud__store-button");
     
     button.addEventListener('click', (event) => {

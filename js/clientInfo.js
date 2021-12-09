@@ -1,4 +1,4 @@
-export function clientInfo(){
+export let clientInfo = () => {
     const client = new ClientJS(); // Create A New Client Object
 
 	let CPU = client.getCPU(); // Get CPU Architecture

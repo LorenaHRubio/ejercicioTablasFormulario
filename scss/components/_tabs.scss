@@ -13,6 +13,9 @@
     justify-content: flex-start;
     align-items: center;
 }
+.container-flex{
+    display: flex;
+}
 .container .tabs-form{
     cursor: pointer;
     color:$color-secondary-darker;

@@ -10,5 +10,6 @@ export function clientInfo(){
 	let isMobile = client.isMobile(); // Check For Mobile
 
 	let arrayClient = [CPU, screenPrint, userAgent, browser, engine, OS, isMobile];
-	return(arrayClient);
+
+	console.log(arrayClient);
 }

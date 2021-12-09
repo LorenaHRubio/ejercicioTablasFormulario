@@ -1,15 +1,13 @@
 .container{
-    background-color: $color-primary-darker;
+    background-color: $color-analogous-second;
     //max-width: 120em;
     width: 50%;
     padding: 1em;
-    box-shadow: $shadow-botton;
     box-sizing: content-box;
 }
 
 .container .ul-form{
     width: 100%;
-    //background-color: royalblue;
     display: flex;
     flex-flow:row nowrap;
     justify-content: flex-start;
@@ -22,17 +20,17 @@
     transition: all .5s ease;
 }
 .container .tabs-form.tabs-active{
-    background-color: $color-primary;
+    background-color: #e9f6a6;
     color:$color-secondary-darkest;
     box-shadow: $shadow-top;
 }
 .container .subcontainer{
     margin: -1em;
     padding: 3em;
-    background-color: $color-primary;
+    box-shadow: $shadow-botton;
+    background-color: #e9f6a6;
 }
 .subcontainer #tabs-elements{
-    //background-color: $grey-darker;
     display: none;
     transition: all .5s ease;
 }

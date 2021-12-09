@@ -1,4 +1,4 @@
-function tabs(){
+//export function tabs(){
     const tabsForm  = document.querySelectorAll('.tabs-form');
     const tabsElements  = document.querySelectorAll('#tabs-elements');
     // CLICK en li
@@ -31,4 +31,57 @@ function tabs(){
             
         });
     });
-}
+//}
+//función del botón que cuando le das click envia la información(o muestra la información)
+//export function buttonSend{
+    const button = document.querySelector(".crud__store-button");
+    
+    button.addEventListener('click', (event) => {
+
+        event.preventDefault();
+        let formElement = document.getElementById("crud__user-form");
+        formData = new FormData(formElement);
+        //ver las cosas en la consola que cogen del formulario con js
+        for (var pair of formData.entries()) {
+            console.log(pair[0]+ ', ' + pair[1]); 
+        }
+        
+    });
+//}  
+
+//export function send(){
+ //const form = ();
+
+//}
+
+//export function client(){
+    const client = new ClientJS(); // Create A New Client Object
+
+	if( client.isMobile() ) { // Check For Mobile Device
+
+		if( client.isMobileAndroid() ) { // Check For Android
+			console.log('We Got Us Some Android!');
+
+		}else if( client.isMobileIOS() ){ // Check For iOS
+			console.log('We Got Us Some Apple iOS!');
+
+		}else{
+			console.log('Unknown Mobile Device...');
+		}
+	}else{
+		if( client.isJava() ) { // Check If Java Is Installed
+  			console.log('Java ' + client.getJavaVersion() ); // Get Java Version
+
+		}else{
+			console.log('No Java Installed...');
+		}
+	}
+    
+    let fingerprint = client.getFingerprint(); // Calculate Device/Browser Fingerprint
+
+	console.log( fingerprint );
+    
+    let softwareVersion = client.getSoftwareVersion(); // Get ClientJS Software Version
+	console.log( softwareVersion );
+
+//}

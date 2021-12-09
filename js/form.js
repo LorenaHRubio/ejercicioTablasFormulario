@@ -1,6 +1,7 @@
-import {clientInfo} from './clientInfo'
+import {clientInfo} from './clientInfo.js'
 
-export let buttonSend = () => {
+export let renderForm = () => {
+
     const button = document.querySelector(".crud__store-button");
     
     button.addEventListener('click', (event) => {

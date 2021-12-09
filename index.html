@@ -76,15 +76,16 @@
 
                 <div class="container">
                     <ul class="ul-form">
-                        <li class="tabs-form tabs-active" data-tab="content">Datos del Usuario</li>
+                        <li class="tabs-form" data-tab="content">Datos del Usuario</li>
                         <li class="tabs-form" data-tab="photo">Fotos</li>
+                        <li class="tabs-form tabs-active" data-tab="selects">Selecciona</li>
                         <li class="tabs-form"  data-tab="skills">Cuestionario</li>
                         <li class="tabs-form"  data-tab="text-area">Comentarios</li>
                     </ul>
                     <div class="subcontainer">
                         <div class="crud__form">
                             <form class="crud__admin-form" id="crud__user-form" action="" method="post" autocomplete="off"> 
-                                <div class="tabs-active" id="tabs-elements" data-tab="content">
+                                <div class="" id="tabs-elements" data-tab="content">
                                     <div class="crud__form-four-columns">
                                         <div class="crud__form-element">
                                             <div class="crud__form-label">
@@ -161,8 +162,35 @@
                                             </div>
                                         </div>
                                     </div>                                                                       
-                                </div>        
+                                </div>
                                 
+                                <div class="tabs-active" id="tabs-elements" data-tab="selects">
+                                    <div class="crud__form-two-columns">
+                                        <div class="crud__form-element">
+                                            <div class="crud__form-label">
+                                                <label for="country">País</label>
+                                            </div>
+                
+                                            <div class="crud__form-input">
+                                                <select name="country" id="country">
+                                                    <option value="country">Seleccione un país</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="crud__form-element">
+                                            <div class="crud__form-label">
+                                                <label for="capital">Capital</label>
+                                            </div>
+                
+                                            <div class="crud__form-input">
+                                                <select name="village" id="village">
+                                                    <option value="village">Seleccione una ciudad</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="" id="tabs-elements" data-tab="skills">
                                     <div class="crud__form-two-columns">
                                         <div class="crud__form-element">
@@ -203,7 +231,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+                                        
                                 <div class="" id="tabs-elements" data-tab="text-area">
                                     <div class="crud__form-one-column">
                                         <div class="crud__form-element">
@@ -212,6 +240,12 @@
                                             </div>
                                             <div class="crud__form-input">
                                                 <textarea name="suggestions" rows="4" cols="50" id="editor"></textarea>
+                                            </div>
+                                            <div class="crud__form-label">
+                                                <label for="name"> ¿Qué cambiarías?</label>
+                                            </div>
+                                            <div class="crud__form-input">
+                                                <textarea name="change-textarea" rows="4" cols="50"></textarea>
                                             </div>
                                         </div>
                                         <div class="crud__form-element">

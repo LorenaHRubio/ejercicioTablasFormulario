@@ -1,5 +1,6 @@
-export let clientInfo = () => {
-    const client = new ClientJS(); // Create A New Client Object
+export const clientInfo = () => {
+    
+	const client = new ClientJS(); // Create A New Client Object
 
 	let CPU = client.getCPU(); // Get CPU Architecture
 	let fingerprint = client.getFingerprint();

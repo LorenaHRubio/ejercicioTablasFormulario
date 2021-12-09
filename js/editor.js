@@ -1,5 +1,5 @@
-import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js'
-import '../node_modules/@ckeditor/ckeditor5-build-classic/build/translations/es.js');
+import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js';
+import '../node_modules/@ckeditor/ckeditor5-build-classic/build/translations/es.js';
 
 export let renderCkeditor = () => {
 

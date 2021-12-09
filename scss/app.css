@@ -715,9 +715,6 @@ footer {
 }
 
 .crud__store-button {
-  background-image: -webkit-gradient(linear, left top, right top, from(#253786), color-stop(50%, #02A8B0), to(#253786));
-  background-image: linear-gradient(to right, #253786 0%, #02A8B0 50%, #253786 100%);
-  background-size: 200% auto;
   border-radius: 1em;
   border: none;
   color: white;

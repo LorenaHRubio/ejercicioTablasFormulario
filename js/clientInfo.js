@@ -11,5 +11,5 @@ export function clientInfo(){
 
 	let arrayClient = [CPU, screenPrint, userAgent, browser, engine, OS, isMobile];
 
-	console.log(arrayClient);
+	return(arrayClient);
 }

@@ -1,7 +1,7 @@
 import { tabs } from '.tabs.js';
-import { buttonSend } from './buttonSend';
-import { client } from './client';
+import { buttonSend } from './buttonSend.js';
+import { clientInfo } from './clientInfo.js';
 
 tabs();
 buttonSend();
-client();
+clientInfo();

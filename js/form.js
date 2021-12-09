@@ -1,4 +1,4 @@
-import {clientInfo} from './clientInfo';
+import {clientInfo} from './clientInfo'
 
 export let buttonSend = () => {
     const button = document.querySelector(".crud__store-button");
@@ -8,7 +8,7 @@ export let buttonSend = () => {
         event.preventDefault();
         let formElement = document.getElementById("crud__user-form");
         formData = new FormData(formElement);
-        
+
         if( ckeditors != 'null'){
     
             Object.entries(ckeditors).forEach(([key, value]) => {

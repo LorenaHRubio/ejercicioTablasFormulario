@@ -11,7 +11,7 @@ export let renderLoginForm = () => {
 
             event.preventDefault();
     
-            let url = form.action;
+            let url = loginForm.action;
             let data = new FormData(loginForm);
             data.append("fingerprint", clientInfo());
     
@@ -23,14 +23,11 @@ export let renderLoginForm = () => {
                 })
                 .then(response => {
                     if (!response.ok) throw response;
-    
-                    console.log(response.data);
-    
+        
                     return response.json();
                 })
                 .then(json => {
                     localStorage.setItem('token', json.data);
-                    console.log(json.data);
                 })
                 .catch(error => {
                     

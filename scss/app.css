@@ -715,6 +715,9 @@ footer {
 }
 
 .crud__store-button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#253786), color-stop(50%, #02A8B0), to(#253786));
+  background-image: linear-gradient(to right, #253786 0%, #02A8B0 50%, #253786 100%);
+  background-size: 200% auto;
   border-radius: 1em;
   border: none;
   color: white;
@@ -927,5 +930,171 @@ footer {
 
 .subcontainer #tabs-elements.tabs-active {
   display: unset;
+}
+
+/*====================
+=======Structure======
+======================*/
+body {
+  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em auto;
+  min-height: 100vh;
+  width: 90%;
+  font-family: 'Roboto';
+}
+
+main {
+  width: 60%;
+  padding: 0 20%;
+}
+
+.main-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.main-form__subtitle {
+  margin: 2em;
+}
+
+.main-form__conditions {
+  text-align: center;
+  font-size: small;
+}
+
+/*====================
+======Typography======
+======================*/
+h1, h2, h3, h4, h5, h6, a, p {
+  font-family: 'Roboto';
+  color: #595959;
+}
+
+h3 {
+  text-align: center;
+  font-weight: normal;
+  padding-top: 4em;
+}
+
+h4 {
+  display: inline;
+}
+
+a {
+  cursor: pointer;
+  color: #0795c5;
+}
+
+/*====================
+========Image=========
+======================*/
+img {
+  max-width: 100%;
+}
+
+/*====================
+========CRUD=========
+======================*/
+.main-form__crud {
+  background-color: white;
+  border: 1px solid #b8b8b8;
+  width: 35%;
+  padding: 2em;
+}
+
+.crud__form-input input {
+  width: 100%;
+  padding: 0.8em;
+  border: solid 1px #dddddf;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.crud__form-label {
+  margin-bottom: 1em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.button__style {
+  border-radius: 0.2em;
+  color: white;
+  padding: 0.5em 0em;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+  background-color: #b51766;
+}
+
+#white-button {
+  color: black;
+  border: 1px solid #b8b8b8;
+  background-color: white;
+}
+
+#button-apple {
+  margin: 1em 0;
+}
+
+.main-form__button svg {
+  width: 1em;
+  padding-right: 0.5em;
+}
+
+.main-form__draw {
+  background-color: white;
+  position: absolute;
+  z-index: 1001;
+  top: 41.7%;
+  width: 1em;
+  height: 1em;
+}
+
+#draw {
+  padding: 0.1em;
+  color: #c2c2c2;
+}
+
+.main-form__crud-suggestion {
+  padding: 1em;
+  background-color: whitesmoke;
+  width: 42%;
+}
+
+.button-suggestion {
+  padding: 1em;
+  text-align: center;
+  border-bottom: #b8b8b8 1px solid;
+}
+
+.button-suggestion h4 {
+  font-weight: 600;
+  color: gray;
+  cursor: pointer;
 }
 /*# sourceMappingURL=app.css.map */

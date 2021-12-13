@@ -1,28 +1,86 @@
-import {clientInfo} from './clientInfo.js'
+import {clientInfo} from './clientInfo.js';
 
 export let renderForm = () => {
 
-    const button = document.querySelector(".crud__store-button");
-    
-    if(button){
-        button.addEventListener('click', (event) => {
+    let loginForm = document.querySelectorAll("crud__admin-form");
+    let loginButton = document.getElementById("crud__create-button");
+
+    if(loginButton){
+
+        loginButton.addEventListener("click", (event) => {
 
             event.preventDefault();
-            let formElement = document.getElementById("crud__user-form");
-            formData = new FormData(formElement);
     
-            if( ckeditors != 'null'){
+            let url = loginForm.action;
+            let data = new FormData(loginForm);
+            data.append("fingerprint", clientInfo());
+    
+            let sendPostRequest = async () => {
         
-                Object.entries(ckeditors).forEach(([key, value]) => {
-                   formData.append(key, value.getData());
+                let request = await fetch(url, {
+                    headers:{'Authorization': 'Bearer ' + localStorage.getItem('token'),},
+                    method: 'POST', 
+                    body: data
+                })
+                .then(response => {
+                    if (!response.ok) throw response;
+        
+                    return response.json();
+                })
+                .then(json => {
+                    localStorage.setItem('token', json.data);
+                })
+                .catch(error => {
+                    
+                    if(error.status == '400'){
+    
+                        error.json().then(jsonError => {
+    
+                            let errors = jsonError.data;    
+    
+                            Object.keys(errors).forEach( (key) => {
+                                let errorMessage = document.createElement('li');
+                                errorMessage.textContent = errors[key];
+                                console.log(errorMessage)
+                            })
+                        })   
+                    }
+    
+                    if(error.status == '500'){
+                        console.log(error);
+                    }
                 });
-             }
-             
-             formData.append('fingerprint', getFingerprint());
-            //ver las cosas en la consola que cogen del formulario con js
-            for (var pair of formData.entries()) {
-                console.log(pair[0]+ ', ' + pair[1]); 
-            }
+    
+                // En caso de usar Axios
+                
+                // let request = await axios.post(url, json)
+                // .then(response => {
+                //     console.log(response);
+                // })
+                // .catch(error => {
+                    
+                //     if(error.response.status == '400'){
+    
+                //         let errors = error.response.data.data;      
+                //         let errorMessage = '';
+    
+                //         Object.keys(errors).forEach( (key) => {
+                //             let errorMessage = document.createElement('li');
+                //             errorMessage.textContent = errors[key];
+                //             console.log(errorMessage)
+                //         })
+    
+                //         console.log(errorMessage);
+                //     }
+    
+                //     if(error.response.status == '500'){
+                //         console.log(error);
+                //     }
+                // });
+            };
+    
+            sendPostRequest();
+            
         });
     }
-}  
+};

@@ -371,11 +371,7 @@ ol, ul {
 ======Typography======
 ======================*/
 h1, h2, h3, h4, h5, h6, a, p {
-  color: white;
-}
-
-h1, h2, h3, h4 {
-  font-family: "Ubuntu";
+  color: black;
 }
 
 h5, h6 {
@@ -637,7 +633,6 @@ footer {
 }
 
 .crud__form-label label {
-  color: white;
   font-family: "Ubuntu";
   font-weight: 600;
   font-size: 1em;
@@ -663,7 +658,6 @@ footer {
 .crud__form-input input,
 .crud__form-input textarea,
 .crud__form-input select {
-  background-color: white;
   border: none;
   border-bottom: 0.1em solid white;
   -webkit-box-sizing: border-box;
@@ -948,6 +942,10 @@ body {
   min-height: 100vh;
   width: 90%;
   font-family: 'Roboto';
+}
+
+body label {
+  color: black;
 }
 
 main {

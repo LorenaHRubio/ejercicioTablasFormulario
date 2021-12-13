@@ -1,6 +1,6 @@
-import {getFingerprint} from './client.js';
+import {clientInfo} from './clientInfo.js';
 
-export let renderForm = () => {
+export let renderLoginForm = () => {
 
     let loginForm = document.getElementById("login-form");
     let loginButton = document.getElementById("login-button");
@@ -13,7 +13,7 @@ export let renderForm = () => {
     
             let url = form.action;
             let data = new FormData(loginForm);
-            data.append("fingerprint", getFingerprint());
+            data.append("fingerprint", clientInfo());
     
             let sendPostRequest = async () => {
         

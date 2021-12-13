@@ -80,7 +80,7 @@
 }
 
 .crud__form-label label{
-    color: $white;
+    //color: $white;
 	font-family: "Ubuntu";
 	font-weight: 600;
 	font-size: 1em;
@@ -103,7 +103,7 @@
 .crud__form-input input, 
 .crud__form-input textarea,
 .crud__form-input select {
-    background-color:$white;
+    //background-color:$white;
 	border: none;
 	border-bottom: 0.1em solid  hsl(0, 0%, 100%);
 	box-sizing: border-box;

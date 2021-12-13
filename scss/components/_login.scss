@@ -60,15 +60,15 @@ img {
 ======================*/
 .main-form__crud{
     background-color: hsl(0, 0%, 100%);
-    border: 1px solid hsl(0, 0%, 72%);
+    border: 1em solid hsl(0, 0%, 72%);
     width: 35%;
     padding: 2em;
 }
 .crud__form-input input{
     width: 100%;
     padding: 0.8em;
-    border: solid 1px hsl(240, 3%, 87%);
-    border-radius: 2px;
+    border: solid .1em hsl(240, 3%, 87%);
+    border-radius: .5em;
     box-sizing: border-box;
     margin-bottom: 1em;
 }

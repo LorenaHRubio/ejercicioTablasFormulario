@@ -58,18 +58,14 @@
                         </tr>
                     </table>
                 </div>
-
+                
                 <div class="container">
-                    <ul class="ul-form">
-                        <li class="tabs-form" data-tab="content">Datos del Usuario</li>
-                        <li class="tabs-form" data-tab="photo">Fotos</li>
-                        <li class="tabs-form" data-tab="selects">Selecciona</li>
-                        <li class="tabs-form"  data-tab="skills">Cuestionario</li>
-                        <li class="tabs-form"  data-tab="text-area">Comentarios</li>
+                    <ul id="error-alerts">
+                        
                     </ul>
                     <div class="subcontainer">
                         <div class="crud__form">
-                            <form class="crud__admin-form" id="crud__user-form" action="" method="post" autocomplete="off"> 
+                            <form class="crud__admin-form" id="crud__user-form" action="http://141.94.27.118:8080/api/register" autocomplete="off"> 
                                 <div class="" id="tabs-elements" data-tab="content">
                                     <div class="crud__form-four-columns">
                                         <div class="crud__form-element">
@@ -97,7 +93,15 @@
                                             <div class="crud__form-input">
                                                 <input type="password" name="password">
                                             </div>
-                                        </div>            
+                                        </div>
+                                        <div class="crud__form-element">
+                                            <div class="crud__form-label">
+                                                <label for="password">Repite contraseña</label>
+                                            </div>
+                                            <div class="crud__form-input">
+                                                <input type="password" name="password">
+                                            </div>
+                                        </div>               
                                     </div>                                    
                                 </div>        
                                                                   
@@ -108,9 +112,10 @@
                                                 <option value="admin">Administradora</option>
                                                 <option value="user">Usuaria</option>
                                             </select>
+                                            
                                         </div>
                                         <div class="crud__form-element">
-                                            <button class="crud__form-button" id="crud__create-button">Guardar</button>
+                                            <button class="crud__form-button" id="crud__form-button">Guardar</button>
                                         </div>
                                     </div>
                                 </div>

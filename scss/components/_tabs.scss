@@ -1,11 +1,9 @@
 .container{
-    background-color: $color-analogous-second;
+    //background-color: $color-analogous-second;
     //max-width: 120em;
     width: 50%;
-    padding: 1em;
     box-sizing: content-box;
 }
-
 .container .ul-form{
     width: 100%;
     display: flex;
@@ -23,7 +21,7 @@
     transition: all .5s ease;
 }
 .container .tabs-form.tabs-active{
-    background-color: #e9f6a6;
+    //background-color: #e9f6a6;
     color:$color-secondary-darkest;
     box-shadow: $shadow-top;
 }
@@ -31,7 +29,8 @@
     margin: -1em;
     padding: 3em;
     box-shadow: $shadow-botton;
-    background-color: #e9f6a6;
+    border-radius: .5em;
+    //background-color: #e9f6a6;
 }
 //.subcontainer #tabs-elements{
    // display: none;

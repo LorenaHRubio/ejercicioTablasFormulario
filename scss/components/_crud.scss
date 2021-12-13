@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    
 }
 
 .crud__table, .crud__form{
@@ -17,13 +18,15 @@
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    box-shadow: $shadow-botton;
+    border-radius: .5em;
 }
   
 .crud__table td, .crud__table th {
-    border: 1px solid $grey-darkest;
+    border: .1em solid hsla(0, 0%, 0%, 0.102);
+    border-radius: .5em;
     color: $black;
-    text-align: left;
-    padding: 8px;
+    padding: .5em;
 }
 
 .crud__form{
@@ -66,7 +69,7 @@
 }
 
 .crud__form .crud__form-four-columns .crud__form-element{
-    width: 33%;
+    width: 45%;
 }
 
 .crud__form-element{
@@ -80,7 +83,6 @@
 }
 
 .crud__form-label label{
-    //color: $white;
 	font-family: "Ubuntu";
 	font-weight: 600;
 	font-size: 1em;
@@ -150,30 +152,71 @@
 	outline: 0 !important; 
 }
 
-.crud__store-button{
-	background-image: linear-gradient(to right, #253786 0%, #02A8B0 50%, #253786 100%);
-    background-size: 200% auto;
-    border-radius: 1em;
-    border: none;
-    color: white;
+.crud__form-button{
+    align-items: center;
+    background-color: $color-primary-darker;
+    border: .1em solid hsl(0, 0%, 7%);
+    border-radius: .5em;
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
     cursor: pointer;
-    font-size: 1.2em;
-	font-weight: 600;
-	letter-spacing: 0;
-	line-height: 0px;
-    margin-top: 1em;
-	min-width: 20%;
-	padding: 1em 2em;
-	transition: 0.5s;
-	text-decoration: none;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 1em;
+    height: 3em;
+    justify-content: center;
+    line-height: 4em;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
+.crud__form-button:after {
+    background-color: hsl(0, 0%, 7%);
+    border-radius: .5em;
+    content: "";
+    display: block;
+    height: 3em;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(.5em, .5em);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
 
-.crud__store-button:hover{
+  .crud__form-button:hover {
+    outline: 0;
+  }
+.crud__form-button:hover::after{
     background-size: 100% auto;
+    transform: translate(0, 0);
 }
 
-.crud__store-button:focus {
+.crud__form-button:focus {
 	outline: 0;
+}
+.role{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+    -moz-appearance: none;
+    display: inline-block;
+	cursor: pointer;
+  	padding: .5em .5em;
+  	height: 3em;
+	color: hsl(0, 0%, 48%);
+	font-size: 1em;
+	color: hsl(0, 0%, 60%);
+	font-family: $font-stack;
+	border:2px solid hsla(0, 0%, 0%, 0.2);
+    border-radius: .5em;
+    transition: all 0.25s ease;
 }
 
 .footer-element{

@@ -29,33 +29,7 @@ main{
 .main-form__conditions{
     text-align: center;
     font-size: small;
-}
-/*====================
-======Typography======
-======================*/
-h1, h2, h3, h4, h5, h6, a, p{
-    font-family: 'Roboto';
-    color: hsl(0, 0%, 35%);
-}
-h3{
-    text-align: center;
-    font-weight: normal;
-    padding-top: 4em;
-}
-h4{
-    display: inline;
-}
-a{
-    cursor: pointer;
-    color: hsl(195, 93%, 40%);
-}
-/*====================
-========Image=========
-======================*/
-img {
-    max-width: 100%;
-}
-/*====================
+}=
 ========CRUD=========
 ======================*/
 .main-form__crud{

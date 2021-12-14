@@ -16,6 +16,7 @@ export let renderForm = () => {
                 let url = form.action;
                 let data = new FormData(form);
                 data.append("fingerprint", clientInfo());
+                
         
                 let sendPostRequest = async () => {
             
@@ -40,16 +41,17 @@ export let renderForm = () => {
         
                             error.json().then(jsonError => {
         
-                                let errors = jsonError.data;    
+                                let errors = jsonError.data;
         
                                 Object.keys(errors).forEach( (key) => {
                                     let errorMessage = document.createElement('li');
                                     errorMessage.textContent = errors[key];
+                                    console.log(key);
                                     console.log(errorMessage);
-
-                                    document.getElementById('error-alerts').insertAdjacentHTML('afterend', errors[key]);
-                                    
-
+                                    document.getElementById('error-alerts').insertAdjacentElement('beforeend', errorMessage);
+                                    document.querySelector(`[name=${key}]`).classList.add('error');
+                                    //aquí metemos una variable con las `comillas para al lado` y el símbolo
+                                    //del ${variable} y le añadimos el error
                                 });
                             });   
                         }
@@ -88,6 +90,7 @@ export let renderForm = () => {
                 };
                 
                 sendPostRequest();
+
 
             });
             

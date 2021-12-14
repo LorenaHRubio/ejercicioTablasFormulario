@@ -1,7 +1,13 @@
 /*====================
 =========CRUD=========
 ======================*/
-
+.error-alerts{
+    text-align: center;
+    li{
+        color: $red;
+        padding: 0.5em;
+    }
+}
 .crud{
     display: flex;
     justify-content: space-between;
@@ -92,7 +98,10 @@
 .crud__form-label--active label{
 	color: $red;
 }
-
+.error{
+    background-color: $color-primary-darker;
+    border: solid 0.2em hsla(0, 100%, 50%, 0.24)!important;
+}
 .crud__form-input{
     width: 100%;
 }
@@ -106,8 +115,8 @@
 .crud__form-input textarea,
 .crud__form-input select {
     //background-color:$white;
-	border: none;
-	border-bottom: 0.1em solid  hsl(0, 0%, 100%);
+	//border: none;
+	//border-bottom: 0.1em solid  hsl(0, 0%, 100%);
 	box-sizing: border-box;
     color: $black;
 	font-family: "Ubuntu";
@@ -151,7 +160,9 @@
 .crud__form-input select, .crud__form-input select:focus, .crud__form-input select:active { 
 	outline: 0 !important; 
 }
-
+/*========================
+===========BOTON==========
+========================*/
 .crud__form-button{
     align-items: center;
     background-color: $color-primary-darker;

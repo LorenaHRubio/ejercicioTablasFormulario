@@ -41,26 +41,21 @@
             <div class="main-element crud">
                 <div class="crud__table">
                     <table>
-                        <tr>
-                          <th>Id</th>
-                          <th>Nombre</th>
-                          <th>Email</th>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>Maria Anders</td>
-                          <td>mariaanders@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>Francisco Chang</td>
-                          <td>mariaanders@gmail.com</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-form">
+
+                        </tbody>
                     </table>
                 </div>
                 
                 <div class="container">
-                    <ul id="error-alerts">
+                    <ul class="error-alerts" id="error-alerts">
                         
                     </ul>
                     <div class="subcontainer">
@@ -74,7 +69,7 @@
                                             </div>
                 
                                             <div class="crud__form-input">
-                                                <input type="text" name="name">
+                                                <input type="text" name="name" id="name">
                                             </div>
                                         </div>
                                         <div class="crud__form-element">
@@ -83,7 +78,7 @@
                                             </div>
                 
                                             <div class="crud__form-input">
-                                                <input type="email" name="email">
+                                                <input type="email" name="email" id="email">
                                             </div>
                                         </div>
                                         <div class="crud__form-element">
@@ -96,10 +91,10 @@
                                         </div>
                                         <div class="crud__form-element">
                                             <div class="crud__form-label">
-                                                <label for="password">Repite contraseña</label>
+                                                <label for="c_password">Repite contraseña</label>
                                             </div>
                                             <div class="crud__form-input">
-                                                <input type="password" name="password">
+                                                <input type="password" name="c_password">
                                             </div>
                                         </div>               
                                     </div>                                    

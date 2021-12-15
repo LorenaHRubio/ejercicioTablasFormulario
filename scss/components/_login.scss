@@ -34,7 +34,11 @@ main{
 ======================*/
 .login-link
 {
-    &a{
+    padding: 1em;
+    text-align: center;
+    a{
+        
+        padding-top: 1em;
         color: $black;
     }
 }

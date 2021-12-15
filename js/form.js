@@ -1,5 +1,4 @@
 import {clientInfo} from './clientInfo.js';
-import { tableForm } from './tableForm.js';
 
 export let renderForm = () => {
 

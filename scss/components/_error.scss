@@ -1,5 +1,48 @@
-#error-alerts ul{
-    display: flex;
-    justify-content: space-around;
-    color: $red;    
+/*===========================
+=========CRUD ERRORS=========
+===========================*/
+.error-alerts{
+    margin: 0;
+    text-align: center;
+    
+    li{
+        color: $white;
+        font-family: 'Ubuntu';
+        font-size: 1.2em;
+        text-align: left;
+        padding: 0.5em 2em;
+    }
+}
+
+#close-errors{    
+    cursor: pointer;
+    font-size: 2em;
+    position: absolute;
+    right: 3em;
+    width: max-content;
+
+    svg{
+        height: 1.5em;
+        width: 1.5em;
+
+        path{
+            fill: $white;
+        }
+    }
+}
+
+#errors{
+    display: none;
+}
+
+#errors.active{
+    background-color: hsl(0, 52%, 53%);
+    border-radius: 0.5em;
+    display: block;
+}
+
+/*input error*/
+.error{
+    background-color: $color-primary-darker;
+    border: solid 0.2em hsla(0, 100%, 50%, 0.24)!important;
 }

@@ -4,6 +4,7 @@ import {clientInfo} from './clientInfo.js';
 import {renderCkeditor} from './editor.js';
 // import {chooseList} from './codepentsSelects.js';
 import {renderLoginForm} from './loginForm.js';
+import {tableForm} from './tableForm.js';
 
 //tabs();
 renderForm();
@@ -11,3 +12,4 @@ clientInfo();
 renderCkeditor();
 // chooseList();
 renderLoginForm();
+tableForm();

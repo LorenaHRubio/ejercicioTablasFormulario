@@ -1,9 +1,11 @@
 import {clientInfo} from './clientInfo.js';
+import { tableForm } from './tableForm.js';
 
 export let renderForm = () => {
 
     let forms = document.querySelectorAll(".crud__admin-form");
     let formButton = document.getElementById("crud__form-button");
+    let closeErrors = document.getElementById('close-errors');
 
     if(formButton){
 
@@ -29,11 +31,11 @@ export let renderForm = () => {
                     })
                     .then(response => {
                         if (!response.ok) throw response;
-            
+
                         return response.json();
                     })
                     .then(json => {
-                        localStorage.setItem('token', json.data);
+                        console.log(json);
                     })
                     .catch(error => {
                         
@@ -42,17 +44,23 @@ export let renderForm = () => {
                             error.json().then(jsonError => {
         
                                 let errors = jsonError.data;
+                                let errorsContainer = document.getElementById('errors');
+                                errorsContainer.classList.add('active');
+                                document.getElementById('error-alerts').innerHTML = "";
         
                                 Object.keys(errors).forEach( (key) => {
-                                    let errorMessage = document.createElement('li');
+                                    var errorMessage = document.createElement('li');
                                     errorMessage.textContent = errors[key];
-                                    console.log(key);
+                                    
                                     console.log(errorMessage);
                                     document.getElementById('error-alerts').insertAdjacentElement('beforeend', errorMessage);
                                     document.querySelector(`[name=${key}]`).classList.add('error');
                                     //aquí metemos una variable con las `comillas para al lado` y el símbolo
                                     //del ${variable} y le añadimos el error
+
+                                    
                                 });
+                                
                             });   
                         }
         
@@ -97,5 +105,20 @@ export let renderForm = () => {
     
             
         });
+    }
+
+    if(closeErrors){
+
+        closeErrors.addEventListener('click', (event) => {
+            event.preventDefault();
+            let errorsContainer = document.getElementById('errors');
+            errorsContainer.classList.remove('active');
+
+            let removeName = document.getElementById("name").classList.remove("error");
+            let removeEmail = document.getElementById("email").classList.remove("error");;
+            let removePassword = document.getElementById("password").classList.remove("error");;
+            let removeCpassword = document.getElementById("c_password").classList.remove("error");
+        });
+
     }
 };

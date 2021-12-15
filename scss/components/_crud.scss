@@ -1,6 +1,12 @@
 /*====================
 =========CRUD=========
 ====================*/
+.register-link{
+    margin-left: 22em;
+    &a{
+        color: $black;
+    }
+}
 .crud{
     display: flex;
     justify-content: space-between;

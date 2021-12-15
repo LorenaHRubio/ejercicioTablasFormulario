@@ -32,11 +32,19 @@ main{
 }=
 ========CRUD=========
 ======================*/
+.login-link
+{
+    &a{
+        color: $black;
+    }
+}
 .main-form__crud{
+    
     background-color: hsl(0, 0%, 100%);
-    border: 1em solid hsl(0, 0%, 72%);
-    width: 35%;
+    border: .2em solid hsl(0, 0%, 72%);
+   
     padding: 2em;
+    border-radius: .5em;
 }
 .crud__form-input input{
     width: 100%;

@@ -48,7 +48,7 @@ export let renderForm = () => {
                                 document.getElementById('error-alerts').innerHTML = "";
         
                                 Object.keys(errors).forEach( (key) => {
-                                    var errorMessage = document.createElement('li');
+                                    let errorMessage = document.createElement('li');
                                     errorMessage.textContent = errors[key];
                                     
                                     console.log(errorMessage);
@@ -56,8 +56,6 @@ export let renderForm = () => {
                                     document.querySelector(`[name=${key}]`).classList.add('error');
                                     //aquí metemos una variable con las `comillas para al lado` y el símbolo
                                     //del ${variable} y le añadimos el error
-
-                                    
                                 });
                                 
                             });   

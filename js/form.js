@@ -110,14 +110,16 @@ export let renderForm = () => {
     if(closeErrors){
 
         closeErrors.addEventListener('click', (event) => {
+            
             event.preventDefault();
             let errorsContainer = document.getElementById('errors');
             errorsContainer.classList.remove('active');
 
-            let removeName = document.getElementById("name").classList.remove("error");
-            let removeEmail = document.getElementById("email").classList.remove("error");;
-            let removePassword = document.getElementById("password").classList.remove("error");;
-            let removeCpassword = document.getElementById("c_password").classList.remove("error");
+            let errors = document.querySelectorAll('.error');
+
+            errors.forEach( error => {
+                error.classList.remove('error');
+            });
         });
 
     }

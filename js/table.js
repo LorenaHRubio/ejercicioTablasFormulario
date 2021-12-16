@@ -29,6 +29,7 @@ export function renderTable(){
                     let headers = document.createElement("tr");
                     tableElement.appendChild(headers);
                     
+                    
                     Object.keys(data[0]).forEach( (key) => {
                         let headerElement = document.createElement('th');
                         headerElement.textContent = key;

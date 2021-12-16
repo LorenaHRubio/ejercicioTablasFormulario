@@ -6,6 +6,8 @@ import {renderCkeditor} from './editor.js';
 import {renderLoginForm} from './loginForm.js';
 //import {renderTable} from './table.js';
 import './tableComponent.js';
+//import {alertMessage} from './alertMessage.js';
+import './messageComponent.js';
 
 //tabs();
 renderForm();
@@ -14,3 +16,4 @@ renderCkeditor();
 // chooseList();
 renderLoginForm();
 //renderTable();
+//alertMessage();

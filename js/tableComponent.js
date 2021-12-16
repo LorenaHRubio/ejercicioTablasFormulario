@@ -3,6 +3,7 @@ class Table extends HTMLElement {
 //Un objeto puede extender otro objeto. 
 //Extender significa que coge las cualidades de un objeto y las amplio.
 //aquí extiendo unas cualidades de HTMLElement
+//SIEMPRE HIJE DE HTMLElement
 //Herencía
 //para poder utilizar el componente hay que poner debajo del todo(Ve abajo)
 

@@ -1,0 +1,16 @@
+#alert-ok-message{
+    display: none;
+}
+#alert-ok-message.active{
+    display: inherit;
+    background-color: $color-primary-darker;
+    padding: 1em;
+    margin: auto;
+    border-radius: .5em;
+    
+    width: max-content;
+    p{
+        color: $red;
+        text-align: center;
+    }
+}

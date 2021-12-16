@@ -1,10 +1,11 @@
 import {clientInfo} from './clientInfo.js';
+import { alertMessage } from './alertMessage.js';
 
 export let renderForm = () => {
 
     let forms = document.querySelectorAll(".crud__admin-form");
     let formButton = document.getElementById("crud__form-button");
-    let closeErrors = document.getElementById('close-errors');
+    let closeErrors = document.getElementById('close-errors');    
 
     if(formButton){
 
@@ -30,15 +31,31 @@ export let renderForm = () => {
                     })
                     .then(response => {
                         if (!response.ok) throw response;
-
+                        
                         return response.json();
                     })
                     .then(json => {
+
                         console.log(json);
+                        if(json.message){
+                            document.dispatchEvent(new CustomEvent('alertMessage', {
+                                detail: {
+                                    type: 'success',
+                                    message: json.message
+                                }
+                            }));
+                        }
                     })
                     .catch(error => {
                         
                         if(error.status == '400'){
+
+                            document.dispatchEvent(new CustomEvent('alertMessage', {
+                                detail: {
+                                    type: 'error',
+                                    message: 'Ha habido un error'
+                                }
+                            }));
         
                             error.json().then(jsonError => {
         

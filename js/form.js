@@ -60,22 +60,23 @@ export let renderForm = () => {
                             }));
         
                             error.json().then(jsonError => {
+                                
         
-                                let errors = jsonError.data;
-                                let errorsContainer = document.getElementById('errors');
-                                errorsContainer.classList.add('active');
-                                document.getElementById('error-alerts').innerHTML = "";
+                                // let errors = jsonError.data;
+                                // let errorsContainer = document.getElementById('errors');
+                                // errorsContainer.classList.add('active');
+                                // document.getElementById('error-alerts').innerHTML = "";
         
-                                Object.keys(errors).forEach( (key) => {
-                                    let errorMessage = document.createElement('li');
-                                    errorMessage.textContent = errors[key];
+                                // Object.keys(errors).forEach( (key) => {
+                                //     let errorMessage = document.createElement('li');
+                                //     errorMessage.textContent = errors[key];
                                     
-                                    console.log(errorMessage);
-                                    document.getElementById('error-alerts').insertAdjacentElement('beforeend', errorMessage);
-                                    document.querySelector(`[name=${key}]`).classList.add('error');
-                                    //aquí metemos una variable con las `comillas para al lado` y el símbolo
-                                    //del ${variable} y le añadimos el error
-                                });
+                                //     console.log(errorMessage);
+                                //     document.getElementById('error-alerts').insertAdjacentElement('beforeend', errorMessage);
+                                //     document.querySelector(`[name=${key}]`).classList.add('error');
+                                //     //aquí metemos una variable con las `comillas para al lado` y el símbolo
+                                //     //del ${variable} y le añadimos el error
+                                // });
                                 
                             });   
                         }

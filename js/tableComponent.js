@@ -33,6 +33,11 @@ class Table extends HTMLElement {
             //si hay una nueva url, al componente le cambiaré
             this.setAttribute('url', this.api + event.detail.url);
         }));
+
+        document.addEventListener("tableFilter", (event =>{
+            
+            this.filterTable(event.detail.search);
+        }));
     }
 
     static get observedAttributes() { return ['url']; }
@@ -123,7 +128,6 @@ class Table extends HTMLElement {
 
                 document.dispatchEvent(new CustomEvent('showElement', {
                     detail: {
-                        //
                         url: this.getAttribute('url') + '/' + editButton.dataset.id,
                     }
                 }));
@@ -168,6 +172,24 @@ class Table extends HTMLElement {
         });
 
         return data;
+    }
+
+    filterTable(search){
+        let table = this.shadow.querySelector("table");
+        let rows = this.shadow.querySelectorAll("tbody tr");
+
+        rows.forEach( row =>{
+
+            let text = row.innerText.toLowerCase();
+            console.log(search, "soy search");
+
+            if (text.indexOf(search.toLowerCase()) > -1 ){
+                row.style.display= '';
+            }               
+            else{
+                row.style.display = 'none';
+            }
+        });
     }           
 }
 //donde pone Table es el nombre de la clase del componente

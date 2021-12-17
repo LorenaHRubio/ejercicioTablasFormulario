@@ -8,6 +8,8 @@ import {renderLoginForm} from './loginForm.js';
 import './tableComponent.js';
 //import {alertMessage} from './alertMessage.js';
 import './messageComponent.js';
+import './tableFilterComponent.js';
+import './validationComponent.js';
 
 //tabs();
 renderForm();

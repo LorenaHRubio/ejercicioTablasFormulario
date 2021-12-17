@@ -28,9 +28,7 @@ class AlertMessage extends HTMLElement{
             function closeAlert(){
                 alertMessage.classList.remove("active");
             }
-            setTimeout(closeAlert, 5000);
-    
-           
+            setTimeout(closeAlert, 5000);           
         }
 
         if(name == 'type'){
@@ -65,7 +63,7 @@ class AlertMessage extends HTMLElement{
                 align-items: center;
                 padding: 1em;
                 margin: auto;
-                border: solid .4em;
+                border: solid .2em;
                 border-radius: .5em;
                 opacity: 0;
                 position: fixed;
@@ -73,7 +71,7 @@ class AlertMessage extends HTMLElement{
                 width: max-content;
                 bottom: 10vh;
                 right: 5%;
-                z-index:1500;
+                z-index: 1500;
                 box-shadow: 5px 5px 15px 5px #000000;
             }
             #alert-svg{
@@ -91,7 +89,6 @@ class AlertMessage extends HTMLElement{
             #alert-message.active{
                 opacity: 1;
             }
-
             #alert-message.success{
                 background-color: hsla(120, 45%, 47%, 0.8);
                 border-color: hsl(120, 45%, 47%);

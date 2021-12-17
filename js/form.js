@@ -29,6 +29,8 @@ export let renderForm = () => {
                         method: 'POST', 
                         body: data
                     })
+                    //aquí se metería el evento que se dispararía
+                    //mientras se espera a que se cargue todo
                     .then(response => {
                         if (!response.ok) throw response;
                         
@@ -53,7 +55,7 @@ export let renderForm = () => {
                             document.dispatchEvent(new CustomEvent('alertMessage', {
                                 detail: {
                                     type: 'error',
-                                    message: 'Ha habido un error'
+                                    message: error.message
                                 }
                             }));
         

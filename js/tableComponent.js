@@ -68,7 +68,7 @@ class Table extends HTMLElement {
                 return response.json();
             })
             .then(json => {
-                this.data = json.data.data;
+                this.data = json.data;
                 this.render();
             })
             .catch(error => console.log(error));

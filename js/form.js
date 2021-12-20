@@ -6,20 +6,59 @@ export let renderForm = () => {
     let forms = document.querySelectorAll(".crud__admin-form");
     let formButton = document.getElementById("crud__form-button");
     let closeErrors = document.getElementById('close-errors');
-    let editButton = document.querySelectorAll(".edit-button");    
+    let editButton = document.querySelectorAll(".edit-button");
 
+    if(editButton)
+    {
+        document.addEventListener("showElement",( event =>{
+            fetch(event.detail.url, { 
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                }
+            })
+            .then(response => {
+                if (!response.ok) throw response;
+                
+                return response.json();
+            })
+            .then(json => {
+    
+                let data = json.data;
+    
+                Object.entries(data).forEach(([key, value]) =>{
+                    
+                });
+            })
+            .catch(error => {
+                console.log(error);   
+            });     
+        }));
+
+    }
     if(formButton){
 
         formButton.addEventListener("click", (event) => {
 
             event.preventDefault();
-    
+            console.log("Hola");
             forms.forEach(form => {
 
                 let url = form.action;
                 let data = new FormData(form);
                 data.append("fingerprint", clientInfo());
+
+                let method = "";
+                console.log(url + "soy url");
                 
+                if(data.get('id')){
+                    method = 'PUT';
+                    url = form.action + '/' + data.get('id');
+                    console.log("entro en el put");
+                }else{
+                    console.log("entro en el post");
+                    method = 'POST';
+                    url = form.action;
+                }
         
                 let sendPostRequest = async () => {
             
@@ -116,12 +155,7 @@ export let renderForm = () => {
                 };
                 
                 sendPostRequest();
-
-
-            });
-            
-    
-            
+            });          
         });
     }
 
@@ -139,18 +173,5 @@ export let renderForm = () => {
                 error.classList.remove('error');
             });
         });
-
-    }
-
-    if(editButton){
-        editButton.addEventListener("click", event => {
-            event.preventDefault();
-
-            forms.forEach(() => {
-                
-            });
-
-        })
-    }
-
-};
+    }    
+}

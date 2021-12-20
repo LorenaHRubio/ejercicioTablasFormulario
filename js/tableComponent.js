@@ -130,30 +130,25 @@ class Table extends HTMLElement {
         </table>`;      
         
         let editButtons = this.shadow.querySelectorAll(".edit-button");
-
         editButtons.forEach(editButton => {
-
             editButton.addEventListener("click", (event) => {
-
                 document.dispatchEvent(new CustomEvent('showElement', {
                     detail: {
                         url: this.getAttribute('url') + '/' + editButton.dataset.id,
                     }
                 }));
             });
-
         });
 
         let deleteButtons = this.shadow.querySelectorAll(".delete-button");
         deleteButtons.forEach(deleteButton =>{
             document.dispatchEvent(new CustomEvent("deleteElement", {
                 detail: {
-                    url: this.getAttribute("url") + deleteButton.dataset.id,
+                    url: this.getAttribute("url") + "/" + deleteButton.dataset.id,
                 }
             }));
             //console.log(deleteButton.dataset.id);
-        });
-        
+        });        
     }
 
     getTableHeader() {
@@ -164,7 +159,7 @@ class Table extends HTMLElement {
             header += `<th>${key}</th>`;
         });
 
-        header += `<th></th>`;
+        header += `<th></th><th></th>`;
 
         return `<tr>${header}</tr>`;
     }

@@ -1,11 +1,12 @@
 import {clientInfo} from './clientInfo.js';
-import { alertMessage } from './alertMessage.js';
+//import { alertMessage } from './alertMessage.js';
 
 export let renderForm = () => {
 
     let forms = document.querySelectorAll(".crud__admin-form");
     let formButton = document.getElementById("crud__form-button");
-    let closeErrors = document.getElementById('close-errors');    
+    let closeErrors = document.getElementById('close-errors');
+    let editButton = document.querySelectorAll(".edit-button");    
 
     if(formButton){
 
@@ -140,4 +141,16 @@ export let renderForm = () => {
         });
 
     }
+
+    if(editButton){
+        editButton.addEventListener("click", event => {
+            event.preventDefault();
+
+            forms.forEach(() => {
+                
+            });
+
+        })
+    }
+
 };

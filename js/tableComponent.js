@@ -181,7 +181,6 @@ class Table extends HTMLElement {
         rows.forEach( row =>{
 
             let text = row.innerText.toLowerCase();
-            console.log(search, "soy search");
 
             if (text.indexOf(search.toLowerCase()) > -1 ){
                 row.style.display= '';

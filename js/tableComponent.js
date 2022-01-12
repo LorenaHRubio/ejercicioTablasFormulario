@@ -23,14 +23,14 @@ class Table extends HTMLElement {
         //se pueden crear eventos "newData" es un evento inventado
         //podemos crear eventos personalizados
         document.addEventListener("newData",( event =>{
-
+            //aquí pondríamos qué hace el evento
+            //carga loadData();
             this.loadData();
         }));
 
         document.addEventListener("newUrl",( event =>{
             //este evento esta escuchando si hay una nueva url, como cambiar de sitio en la web
             //pero sin recargar la página
-            //si hay una nueva url, al componente le cambiaré
             this.setAttribute('url', this.api + event.detail.url);
         }));
 
